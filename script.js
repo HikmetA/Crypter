@@ -1,52 +1,80 @@
 const swiperHotCollections = new Swiper(".swiperHotCollections", {
   slidesPerView: 4,
-  spaceBetween: 30,
   breakpoints: {
     1320: {
-      slidesPerView: 4,
-      spaceBetween: 20,
+      slidesPerView: 3,
     },
     1120: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    768: {
       slidesPerView: 2,
-      spaceBetween: 20,
+    },
+    300:{
+      slidesPerView: 1,
     },
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".collection_btn_next",
+    prevEl: ".collection_btn_prev",
   },
 });
 const swiperHotBid = new Swiper(".HotBid", {
-  slidesPerView: 3,
-  autoplay: {
-    delay: 1700,
-    disableOnInteraction: false,
+  slidesPerView: 4, 
+  breakpoints: {
+    1320: {
+      slidesPerView: 3,
+    },
+    1120: {
+      slidesPerView: 2,
+    },
+    300:{
+      slidesPerView: 1,
+    },
+    
   },
-  // spaceBetween: 30,
-  // breakpoints: {
-  //   1320: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 20,
-  //   },
-  //   1120: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  // },
   navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
+    prevEl: ".btn_prev",
+    nextEl: ".btn_next",
+  },
+});
+const swiper = new Swiper(".popular-sellersWrapper", {
+  slidesPerView: 3,
+  breakpoints: {
+    1320: {
+      slidesPerView: 2,
+    },
+    1120: {
+      slidesPerView: 2,
+    },
+    300:{
+      slidesPerView: 1,
+    },
+    
+  },
+  navigation: {
+    nextEl: ".popular-sellers_btn-next",
+    prevEl: ".popular-sellers_btn-prev",
+  },
+});
+const discoverSwiper = new Swiper(".discoverSwiper", {
+  slidesPerView: 2,
+  breakpoints: {
+    1320: {
+      slidesPerView: 2,
+    },
+    1120: {
+      slidesPerView: 2,
+    },
+    300:{
+      slidesPerView: 1,
+    },
+  },
+  navigation: {
+    nextEl: ".discover_next",
+    prevEl: ".discover_prev",
   },
 });
 
+
+ 
 let maxValue = document.getElementById("max-value");
 
 function validateRange(maxPrice) {
@@ -64,3 +92,13 @@ inputElements.forEach((element) => {
 });
 
 validateRange(inputElements[1].value);
+
+
+
+const burgerMenu = document.querySelector('.burger-menu');
+const overlay = document.querySelector('.menu');
+
+burgerMenu.addEventListener('click', function() {
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});
