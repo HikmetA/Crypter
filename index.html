@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Crypter</title>
   </head>
   <body>
@@ -376,10 +377,21 @@
               alt=""
             />
           </div>
-          <select name="select" id="select" class="popular_sellers_select">
+          <!-- <select name="select" id="select" class="popular_sellers_select">
             <option value="1">Today</option>
             <option value="2">Month</option>
-          </select>
+          </select> -->
+          <div class="select_menu">
+            <div class="select">
+              <span>Select date</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="options-list">
+              <div class="option">Today</div>
+              <div class="option">Month</div>
+              <div class="option">Year</div>
+            </div>
+          </div>
         </div>
         <div class="popular_sellers_container">
           <div class="swiper popular-sellersWrapper">
@@ -1066,9 +1078,17 @@
       <section class="discover">
         <h3 class="discover_title">Discover</h3>
         <div class="discover_header">
-          <select class="discover_header_select" name="#" id="#">
-            <option value="#"><span> Recently added </span></option>
-          </select>
+          <div class="discover_menu">
+            <div class="discover_select">
+              <span>Date added</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="discover_options-list">
+              <div class="discover_option">Recently added</div>
+              <div class="discover_option">A week ago</div>
+              <div class="discover_option">A month ago</div>
+            </div>
+          </div>
           <div class="discover_category">
             <span class="category_titles">All items</span>
             <span class="category_titles">Art</span>
@@ -1086,21 +1106,41 @@
           <div class="filters_inner">
             <div class="inner_content">
               <p class="inner_content_title">Price</p>
-              <select class="inner_content_select" name="#" id="#">
-                <option value="#">Highest price</option>
-              </select>
+              <div class="inner_content_menu">
+                <div class="inner_content_select">
+                  <span>Choose price</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="inner_content-list">
+                  <div class="inner_content_option">Highest price</div>
+                  <div class="inner_content_option">Lowest price</div>
+                </div>
+              </div>
             </div>
             <div class="inner_content">
               <p class="inner_content_title">Likes</p>
-              <select class="inner_content_select" name="#" id="#">
-                <option value="#">Most liked</option>
-              </select>
+              <div class="inner_content_menu">
+                <div class="likes_select">
+                  <span>Choose rating</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="likes_list">
+                  <div class="likes_option">Most liked</div>
+                  <div class="likes_option">Most disliked</div>
+                </div>
+              </div>
             </div>
             <div class="inner_content">
               <p class="inner_content_title">Creator</p>
-              <select class="inner_content_select" name="#" id="#">
-                <option value="#">Verified only</option>
-              </select>
+              <div class="inner_content_menu">
+                <div class="creator_select">
+                  <span>Choose creators</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="creator_list">
+                  <div class="creator_option">Verified only</div>
+                </div>
+              </div>
             </div>
             <div class="price_slider">
               <p class="inner_content_title">Price range</p>

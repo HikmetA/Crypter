@@ -832,17 +832,52 @@ video {
     margin-bottom: 15px;
   }
 }
-.container .popular_sellers .popular_sellers_inner .popular_sellers_select {
+.container .popular_sellers .popular_sellers_inner .select_menu {
   width: 256px;
-  height: 48px;
-  background: #fcfcfd;
-  border: 2px solid #e6e8ec;
-  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
-  color: #23262f;
-  padding: 8px 8px 8px 16px;
+}
+.container .popular_sellers .popular_sellers_inner .select_menu .select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  border-radius: 10px;
+  border: 1px solid #e6e8ec;
+  padding: 12px;
+}
+.container .popular_sellers .popular_sellers_inner .select_menu .options-list {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 12px;
+  overflow-y: auto;
+  max-height: 70px;
+  transition: 0.4s linear 0.2s;
+  scrollbar-width: thin;
+  height: 0;
+}
+.container .popular_sellers .popular_sellers_inner .select_menu .options-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+.container .popular_sellers .popular_sellers_inner .select_menu .options-list .option {
+  padding: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+.container .popular_sellers .popular_sellers_inner .select_menu .options-list .option:hover {
+  color: #777e91;
+}
+.container .popular_sellers .popular_sellers_inner .select_menu .options-list.active {
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  background-color: #353945;
+  color: #fff;
 }
 @media screen and (max-width: 476px) {
   .container .popular_sellers .popular_sellers_inner {
@@ -855,6 +890,7 @@ video {
   justify-content: center;
   position: relative;
   height: 310px;
+  margin-top: 20px;
 }
 .container .popular_sellers .popular_sellers_container .popular-sellersWrapper {
   display: flex;
@@ -956,6 +992,11 @@ video {
 @media screen and (max-width: 476px) {
   .container .popular_sellers .popular_sellers_container .swiper-button-next {
     right: 42%;
+  }
+}
+@media screen and (max-width: 476px) {
+  .container .popular_sellers .popular_sellers_container {
+    margin-top: 70px;
   }
 }
 .container .hot_bid {
@@ -1220,18 +1261,52 @@ video {
   border-bottom: 2px solid #e6e8ec;
   padding-bottom: 32px;
 }
-.container .discover .discover_header .discover_header_select {
+.container .discover .discover_header .discover_menu {
+  width: 180px;
   cursor: pointer;
-  width: 256px;
-  height: 48px;
-  background: #fcfcfd;
-  border: 2px solid #e6e8ec;
-  border-radius: 12px;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
-  color: #23262f;
   font-family: "Poppins", sans-serif;
-  padding: 8px 8px 8px 16px;
+}
+.container .discover .discover_header .discover_menu .discover_select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  border-radius: 10px;
+  border: 1px solid #e6e8ec;
+  padding: 12px;
+}
+.container .discover .discover_header .discover_menu .discover_options-list {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 12px;
+  overflow-y: auto;
+  max-height: 70px;
+  transition: 0.4s linear 0.2s;
+  scrollbar-width: thin;
+  height: 0;
+}
+.container .discover .discover_header .discover_menu .discover_options-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+.container .discover .discover_header .discover_menu .discover_options-list .discover_option {
+  padding: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+.container .discover .discover_header .discover_menu .discover_options-list .discover_option:hover {
+  color: #777e91;
+}
+.container .discover .discover_header .discover_menu .discover_options-list.active {
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  background-color: #353945;
+  color: #fff;
 }
 .container .discover .discover_header .discover_category {
   width: 600px !important;
@@ -1307,18 +1382,130 @@ video {
     display: none;
   }
 }
-.container .discover .filters .filters_inner .inner_content .inner_content_select {
-  cursor: pointer;
+.container .discover .filters .filters_inner .inner_content .inner_content_menu {
   width: 256px;
-  height: 48px;
-  background: #fcfcfd;
-  border: 2px solid #e6e8ec;
-  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
-  color: #23262f;
   font-family: "Poppins", sans-serif;
-  padding: 8px 8px 8px 16px;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .inner_content_select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  border-radius: 10px;
+  border: 1px solid #e6e8ec;
+  padding: 12px;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .inner_content-list {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 12px;
+  overflow-y: auto;
+  max-height: 70px;
+  transition: 0.4s linear 0.2s;
+  scrollbar-width: thin;
+  height: 0;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .inner_content-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .inner_content-list .inner_content_option {
+  padding: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .inner_content-list .inner_content_option:hover {
+  color: #777e91;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .inner_content-list.active {
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  background-color: #353945;
+  color: #fff;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .likes_select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  border-radius: 10px;
+  border: 1px solid #e6e8ec;
+  padding: 12px;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .likes_list {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 12px;
+  overflow-y: auto;
+  max-height: 70px;
+  transition: 0.4s linear 0.2s;
+  scrollbar-width: thin;
+  height: 0;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .likes_list::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .likes_list .likes_option {
+  padding: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .likes_list .likes_option:hover {
+  color: #777e91;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .likes_list.active {
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  background-color: #353945;
+  color: #fff;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .creator_select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  border-radius: 10px;
+  border: 1px solid #e6e8ec;
+  padding: 12px;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .creator_list {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 12px;
+  overflow-y: auto;
+  max-height: 70px;
+  transition: 0.4s linear 0.2s;
+  scrollbar-width: thin;
+  height: 0;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .creator_list::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .creator_list .creator_option {
+  padding: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .creator_list .creator_option:hover {
+  color: #777e91;
+}
+.container .discover .filters .filters_inner .inner_content .inner_content_menu .creator_list.active {
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  background-color: #353945;
+  color: #fff;
 }
 @media screen and (max-width: 476px) {
   .container .discover .filters .filters_inner .inner_content {
